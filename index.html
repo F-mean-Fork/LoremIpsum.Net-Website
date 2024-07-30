@@ -125,6 +125,7 @@
                       </select>
                         <input type="email" name="user-email" class="wrapper__contentWrap__from-wrap-info-field" placeholder="Ваш e-mail">
                         <input type="text" name="user-name" class="wrapper__contentWrap__from-wrap-info-field" placeholder="Ваше имя">
+                        
                         <div class="wrapper__contentWrap__from-wrap-info__rangeWrap">
                           <div>
                             <p>Sed ut perspiciatis, unde omnis iste natus</p>
@@ -132,9 +133,12 @@
                           </div>
                           <input type="range" class="wrapper__contentWrap__from-wrap-info__rangeWrap-button" max="100">
                         </div>
-                        <input type="file" name="user-file" class="wrapper__contentWrap__from-wrap-info-field" placeholder="Прикрепить файл" id="file-input">
+                        <div class="wrapper__contentWrap__from-wrap-info-field">
+                          <input type="file" name="user-file" id="file-input">
+                          <label for="input-file" class="wrapper__contentWrap__from-wrap-info-doc"><img src="img\\svg\\add_doc-icon.svg" alt="upload icon" class="wrapper__contentWrap__from-wrap-info-doc-thumb"> Прикрепить файл</label>
                         </div>
-                        <button type="submit" class="wrapper__contentWrap__from-wrap-button">Отправить</button>                   
+                      </div>  
+                      <button type="submit" class="wrapper__contentWrap__from-wrap-button">Отправить</button>                   
                     </div>
                 </fieldset>
             </form>
