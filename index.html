@@ -18,9 +18,7 @@
     <header class="header">
       <div class="wrapper">
         <div class="header__wrapper">
-          <a href="/" class="header__wrapper__logoLink">
-            <img src=".\\img\\logo.png" alt="LoremIpsum.net" class="header__wrapper__logoLink-pic" />
-          </a>
+          <img src=".\img\svg\logo.svg" alt="LoremIpsum.net" class="header__wrapper__logoLink-pic" />
           <nav class="header__wrapper__nav">
             <div class="header__wrapper__nav-links">
               <a href="#">Бизнес</a>
@@ -29,6 +27,11 @@
               <a href="#">Оформить заказ</a>
             </div>
           </nav>
+          <div class="header_wrapper-burger burger">
+            <nav class="burger-line burger-line-first"></nav>
+            <nav class="burger-line burger-line-second"></nav>
+            <nav class="burger-line burger-line-third"></nav>
+        </div>
         </div>
       </div>
     </header>
@@ -36,110 +39,102 @@
     <main class="main">
       <section class="intro">
         <div class="wrapper">
-          <h1 class="intro__wrapper__intro-title">
-            <span style="color: rgba(62, 156, 220, 1)">Lorem ipsum</span> dolor
-            sit<br />amet consectetur
-            <span style="color: rgba(62, 156, 220, 1)">adipiscing</span>
-          </h1>
-          <p class="intro__wrapper__intro-subtitle">
-            At vero eos et accusamus et iusto odio dignissimos ducimus!
-          </p>
-          <ul class="intro__wrapper__intro-list">
-            <li>Totam rem aperiam eaque ipsa</li>
-            <li>Sit voluptatem accusantium doloremque laudantium</li>
-            <li>Sed ut perspiciatis, unde omnis iste natus error</li>
-          </ul>
-          <form class="intro__wrapper__intro__search-form">
-            <button
-              type="submit"
-              class="intro__wrapper__intro__search-form-button"
-            >
-              заказать
-            </button>
-            <button
-              type="submit"
-              class="intro__wrapper__intro__search-form-button"
-            >
-              подробнее
-            </button>
-          </form>
+          <div class="wrapper__contentWrap">
+            <h1 class="intro__wrapper__contentWrap-intro-title">
+              <span style="color: rgba(62, 156, 220, 1)">Lorem ipsum</span> dolor
+              sit<br />amet consectetur
+              <span style="color: rgba(62, 156, 220, 1)">adipiscing</span>
+            </h1>
+            <p class="intro__wrapper__contentWrap-intro-subtitle">
+              At vero eos et accusamus et iusto odio dignissimos ducimus!
+            </p>
+            <ul class="intro__wrapper__contentWrap-intro-list">
+              <li>Totam rem aperiam eaque ipsa</li>
+              <li>Sit voluptatem accusantium doloremque laudantium</li>
+              <li>Sed ut perspiciatis, unde omnis iste natus error</li>
+            </ul>
+            <form class="intro__wrapper__contentWrap-intro__search-form">
+              <button
+                type="submit"
+                class="intro__wrapper__contentWrap-intro__search-form-button"
+              >
+                заказать
+              </button>
+              <button
+                type="submit"
+                class="intro__wrapper__contentWrap-intro__search-form-button"
+              >
+                подробнее
+              </button>
+            </form>
+          </div>
         </div>
       </section>
 
       <section class="orderOffer">
         <div class="wrapper">
-          <div class="wrapper__contentWrap">
+          <div class="orderOffer__contentWrap">
             <h2>
               Оформление
               <span style="color: rgba(62, 156, 220, 1)">Заказа</span>
             </h2>
             <p>Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
-            <div class="wrapper__contentWrap__stages-wrap">
-              <div class="wrapper__contentWrap__stages-wrap-circle">
-                <img src=".\\img\\svg\zoom-icon.svg" alt="loupe icon" class="wrapper__contentWrap__stages-wrap-circle-thumb1"/>
-              </div>
-              <div class="wrapper__contentWrap__stages-wrap-circle">
-                <img
-                  src=".\\img\\svg\percent-icon.svg"
-                  alt="percent icon"
-                  class="wrapper__contentWrap__stages-wrap-circle-thumb2"
-                />
-              </div>
-              <div class="wrapper__contentWrap__stages-wrap-circle">
-                <img
-                  src=".\\img\\svg\doc-icon.svg"
-                  alt="document icon"
-                  class="wrapper__contentWrap__stages-wrap-circle-thumb"
-                />
-              </div>
-              <div class="wrapper__contentWrap__stages-wrap-circle">
-                <img
-                  src=".\\img\\svg\mail-icon.svg"
-                  alt="email icon"
-                  class="wrapper__contentWrap__stages-wrap-circle-thumb"
-                />
-              </div>
-              <div class="wrapper__contentWrap__stages-wrap-circle">
-                <img
-                  src=".\\img\\svg\money-icon.svg"
-                  alt="money icon"
-                  class="wrapper__contentWrap__stages-wrap-circle-thumb"
-                />
-              </div>
-            </div>
-            <div class="wrapper__contentWrap__stages-wrap-text">
+            <div class="orderOffer__contentWrap__stages__wrap">
+              <div class="orderOffer__contentWrap__stages__wrap__circle">
+                <div class="orderOffer__contentWrap__stages__wrap__circle__container">
+                  <img src=".\\img\\svg\zoom-icon.svg" alt="loupe icon" class="orderOffer__contentWrap__stages__wrap__circle__container__pic--sm"/>
+                </div>
                 <p>Lorem ipsum dolor sit amet</p>
+              </div>
+              <div class="orderOffer__contentWrap__stages__wrap__circle">
+                <div class="orderOffer__contentWrap__stages__wrap__circle__container">
+                  <img src=".\\img\\svg\percent-icon.svg" alt="percent icon" class="orderOffer__contentWrap__stages__wrap__circle__container__pic--sm"/>
+                </div>
                 <p>Сonsecteturadipiscing elit</p>
+              </div>
+              <div class="orderOffer__contentWrap__stages__wrap__circle">
+                <div class="orderOffer__contentWrap__stages__wrap__circle__container">
+                  <img src=".\\img\\svg\doc-icon.svg" alt="document icon"class="orderOffer__contentWrap__stages__wrap__circle__container__pic"/>
+                </div>
                 <p>Sed do eiusmod tempor</p>
+              </div>
+              <div class="orderOffer__contentWrap__stages__wrap__circle">
+                <div class="orderOffer__contentWrap__stages__wrap__circle__container">
+                  <img src=".\\img\\svg\mail-icon.svg" alt="email icon" class="orderOffer__contentWrap__stages__wrap__circle__container__pic"/>
+                </div>
                 <p>Esse cillum dolore eu fugiat</p>
+              </div>
+              <div class="orderOffer__contentWrap__stages__wrap__circle">
+                <div class="orderOffer__contentWrap__stages__wrap__circle__container--last">
+                  <img src=".\\img\\svg\money-icon.svg"  alt="money icon" class="orderOffer__contentWrap__stages__wrap__circle__container__pic"/>
+                </div>
                 <p>Excepteur sint occaecat cupidatat non proident</p>
+              </div>
             </div>
             <form action="" class="wrapper__contentWrap__from">
                 <fieldset class="wrapper__contentWrap__from-wrap">
-                    <div class="wrapper__contentWrap__from-wrap-info">
-                      <select name="user-choice-system" class="wrapper__contentWrap__from-wrap-info-field" id="dropDown">
-                        <option>Выберите тип системы</option>
-                        <option value="1">Система 1</option>
-                        <option value="2">Система 2</option>
-                        <option value="3">Система 3</option>
-                      </select>
-                        <input type="email" name="user-email" class="wrapper__contentWrap__from-wrap-info-field" placeholder="Ваш e-mail">
-                        <input type="text" name="user-name" class="wrapper__contentWrap__from-wrap-info-field" placeholder="Ваше имя">
-                        
-                        <div class="wrapper__contentWrap__from-wrap-info__rangeWrap">
-                          <div>
-                            <p>Sed ut perspiciatis, unde omnis iste natus</p>
-                            <p class="wrapper__contentWrap__from-wrap-info__rangeWrap-percentValue"></p>  
-                          </div>
-                          <input type="range" class="wrapper__contentWrap__from-wrap-info__rangeWrap-button" max="100">
+                  <div class="wrapper__contentWrap__from-wrap-info">
+                    <select name="user-choice-system" class="wrapper__contentWrap__from-wrap-info-field" id="dropDown">
+                      <option>Выберите тип системы</option>
+                      <option value="1">Система 1</option>
+                      <option value="2">Система 2</option>
+                      <option value="3">Система 3</option>
+                    </select>
+                      <input type="email" name="user-email" class="wrapper__contentWrap__from-wrap-info-field" placeholder="Ваш e-mail">
+                      <input type="text" name="user-name" class="wrapper__contentWrap__from-wrap-info-field" placeholder="Ваше имя">
+                      <div class="wrapper__contentWrap__from-wrap-info__rangeWrap">
+                        <div>
+                          <p>Sed ut perspiciatis, unde omnis iste natus</p>
+                          <p class="wrapper__contentWrap__from-wrap-info__rangeWrap-percentValue"></p>  
                         </div>
-                        <div class="wrapper__contentWrap__from-wrap-info-field">
-                          <input type="file" name="user-file" id="file-input">
-                          <label for="input-file" class="wrapper__contentWrap__from-wrap-info-doc"><img src="img\\svg\\add_doc-icon.svg" alt="upload icon" class="wrapper__contentWrap__from-wrap-info-doc-thumb"> Прикрепить файл</label>
-                        </div>
-                      </div>  
-                      <button type="submit" class="wrapper__contentWrap__from-wrap-button">Отправить</button>                   
-                    </div>
+                        <input type="range" class="wrapper__contentWrap__from-wrap-info__rangeWrap-button" max="100">
+                      </div>
+                      <div class="wrapper__contentWrap__from-wrap-info-field">
+                        <input type="file" name="user-file" id="file-input">
+                        <label for="input-file" class="wrapper__contentWrap__from-wrap-info-doc"><img src="img\\svg\\add_doc-icon.svg" alt="upload icon" class="wrapper__contentWrap__from-wrap-info-doc-thumb"> Прикрепить файл</label>
+                      </div> 
+                  </div>  
+                  <button type="submit" class="wrapper__contentWrap__from-wrap-button">Отправить</button>                   
                 </fieldset>
             </form>
           </div>
@@ -150,20 +145,36 @@
     <footer class="footer">
       <div class="wrapper">
         <div class="footer__wrapper">
-          <div class="footer__wrapper-info">
+          <div class="footer__wrapper__info--full">
             <p>© 2018 «LoremIpsum.net» Все права защищены.</p>
             |
             <img src="img\svg\kiwi-icon.svg" alt="kiwi icon">
-            <a href="#" class="footer__wrapper-info-link">Qiwi wallet</a>
+            <a href="#" class="footer__wrapper__info__link">Qiwi wallet</a>
             <img src="img\svg\yandex_money-icon.svg" alt="yandex icon">
-            <a href="#" class="footer__wrapper-info-link">Yandex Money</a>
+            <a href="#" class="footer__wrapper__info__link">Yandex Money</a>
             <img src="img\svg\web_money-icon.svg" alt="web money icon">
             <a href="#" class="footer__wrapper-info-link third-link">Web Money</a>
             |
             <img src="img\svg\footer_mail-icon.svg" alt="email icon">
-            <a href="#" class="footer__wrapper-info-link">info@ipsum228.com</a>
+            <a href="#" class="footer__wrapper__info__link">info@ipsum228.com</a>
             <img src="img\svg\vk-icon.svg" alt="vk icon">
-            <a href="#" class="footer__wrapper-info-link">Мы вконтакте</a>
+            <a href="#" class="footer__wrapper__info__link">Мы вконтакте</a>
+          </div>
+
+          <div class="footer__wrapper__info--small">
+            <div class="footer__wrapper_info__wrap">
+              <img src="img\svg\kiwi-icon.svg" alt="kiwi icon">
+              <a href="#" class="footer__wrapper__info__link">Qiwi wallet</a>
+              <img src="img\svg\yandex_money-icon.svg" alt="yandex icon">
+              <a href="#" class="footer__wrapper__info__link">Yandex Money</a>
+              <img src="img\svg\web_money-icon.svg" alt="web money icon">
+              <a href="#" class="footer__wrapper__info__link">Web Money</a>
+              <img src="img\svg\footer_mail-icon.svg" alt="email icon">
+              <a href="#" class="footer__wrapper__info__link">info@ipsum228.com</a>
+              <img src="img\svg\vk-icon.svg" alt="vk icon">
+              <a href="#" class="footer__wrapper__info__link">Мы вконтакте</a>       
+            </div>
+            <p>© 2018 «LoremIpsum.net» Все права защищены.</p>
           </div>
         </div>
       </div>
