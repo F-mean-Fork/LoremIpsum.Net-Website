@@ -1090,20 +1090,17 @@ input[type="file"] {
   }
 
   .orderOffer__contentWrap__slider__btnWrap {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 80%;
+    top: auto;
+    bottom: 20px;
     width: 150px;
     transform: none;
   }
 
   .orderOffer__contentWrap__slider__dotsWrap {
     position: absolute;
-    top: 84%;
+    bottom: 35px;
     margin-bottom: 0;
     display: flex;
-    gap: 6px;
   }
 
   .orderOffer__contentWrap__slider {
@@ -1424,25 +1421,22 @@ input[type="file"] {
   }
 
   .orderOffer__contentWrap__slider__btnWrap {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 80%;
+    top: auto;
+    bottom: 20px;
     width: 150px;
     transform: none;
   }
 
   .orderOffer__contentWrap__slider__dotsWrap {
     position: absolute;
-    top: 83%;
+    bottom: 35px;
     margin-bottom: 0;
     display: flex;
-    gap: 6px;
   }
 
   .orderOffer__contentWrap__slider {
     width: 320px;
-    margin-bottom: 120px;
+    margin-bottom: 80px;
   }
 
   .orderOffer__contentWrap__slider__item__text {
