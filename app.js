@@ -1,5 +1,6 @@
-const rangeInput = document.querySelector('.wrapper__contentWrap__from-wrap-info__rangeWrap-button');
-const percentValue = document.querySelector('.wrapper__contentWrap__from-wrap-info__rangeWrap-percentValue');
+const rangeInput = document.querySelector('.wrapper__contentWrap__from__wrap__info__rangeWrap__button');
+const percentValue = document.querySelector('.wrapper__contentWrap__from__wrap__info__rangeWrap__percentValue');
+
 
 (function() {
     const header = document.querySelector('.header')
@@ -16,7 +17,6 @@ rangeInput.max = 100;
 rangeInput.value = 25;
 
 rangeInput.addEventListener('input', () => {
-
   const resValue = (rangeInput.value / rangeInput.max) * 100;
   percentValue.textContent = `${Math.round(resValue)}%`;
 });
@@ -37,3 +37,4 @@ rangeInput.dispatchEvent(new Event('input'));
         menu.classList.remove('header__wrapper__nav__active');
     });
 }())
+

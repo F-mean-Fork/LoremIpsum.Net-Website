@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
+    <script src="slider.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -116,31 +117,118 @@
               </div>
             </div>
             <form action="" class="wrapper__contentWrap__from">
-                <fieldset class="wrapper__contentWrap__from-wrap">
-                  <div class="wrapper__contentWrap__from-wrap-info">
-                    <select name="user-choice-system" class="wrapper__contentWrap__from-wrap-info-field" id="dropDown">
+                <fieldset class="wrapper__contentWrap__from__wrap">
+                  <div class="wrapper__contentWrap__from__wrap__info">
+                    <select name="user-choice-system" class="wrapper__contentWrap__from__wrap__info__field" id="dropDown">
                       <option>Выберите тип системы</option>
                       <option value="1">Система 1</option>
                       <option value="2">Система 2</option>
                       <option value="3">Система 3</option>
                     </select>
-                      <input type="email" name="user-email" class="wrapper__contentWrap__from-wrap-info-field" placeholder="Ваш e-mail">
-                      <input type="text" name="user-name" class="wrapper__contentWrap__from-wrap-info-field" placeholder="Ваше имя">
-                      <div class="wrapper__contentWrap__from-wrap-info__rangeWrap">
+                      <input type="email" name="user-email" class="wrapper__contentWrap__from__wrap__info__field" placeholder="Ваш e-mail">
+                      <input type="text" name="user-name" class="wrapper__contentWrap__from__wrap__info__field" placeholder="Ваше имя">
+                      <div class="wrapper__contentWrap__from__wrap__info__rangeWrap">
                         <div>
                           <p>Sed ut perspiciatis, unde omnis iste natus</p>
-                          <p class="wrapper__contentWrap__from-wrap-info__rangeWrap-percentValue"></p>  
+                          <p class="wrapper__contentWrap__from__wrap__info__rangeWrap__percentValue"></p>  
                         </div>
-                        <input type="range" class="wrapper__contentWrap__from-wrap-info__rangeWrap-button" max="100">
+                        <input type="range" class="wrapper__contentWrap__from__wrap__info__rangeWrap__button" max="100">
                       </div>
-                      <div class="wrapper__contentWrap__from-wrap-info-field">
+                      <div class="wrapper__contentWrap__from__wrap__info__field">
                         <input type="file" name="user-file" id="file-input">
-                        <label for="input-file" class="wrapper__contentWrap__from-wrap-info-doc"><img src="img\\svg\\add_doc-icon.svg" alt="upload icon" class="wrapper__contentWrap__from-wrap-info-doc-thumb"> Прикрепить файл</label>
+                        <label for="input-file" class="wrapper__contentWrap__from__wrap__info__doc"><img src="img\\svg\\add_doc-icon.svg" alt="upload icon" class="wrapper__contentWrap__from__wrap__info__doc__thumb"> Прикрепить файл</label>
                       </div> 
                   </div>  
-                  <button type="submit" class="wrapper__contentWrap__from-wrap-button">Отправить</button>                   
+                  <button type="submit" class="wrapper__contentWrap__from__wrap__button">Отправить</button>                   
                 </fieldset>
             </form>
+            <section class="review">
+              <h2>
+                Что о нас думают наши <span style="color: rgba(62, 156, 220, 1)">клиенты</span>
+              </h2>
+              <div class="orderOffer__contentWrap__slider__btnWrap">
+                <button id="left" class="orderOffer__contentWrap__slider__btnWrap__btn">
+                  <img src="img\\chevron-left.png" alt="">
+                </button>
+                <button id="right" class="orderOffer__contentWrap__slider__btnWrap__btn">
+                  <img src="img\\chevron-right.png" alt="">
+                </button>
+              </div>
+              <div class="orderOffer__contentWrap__slider">
+                  <div class="orderOffer__contentWrap__slider__item">
+                    <div class="orderOffer__contentWrap__slider__item__info">
+                      <img src="img\\persone_photo.jpg" alt="personal foto">
+                      <div class="orderOffer__contentWrap__slider__item__info__desc">
+                        <div class="orderOffer__contentWrap__slider__item__info__desc__name">
+                          Alan Walker
+                        </div>
+                        <div class="orderOffer__contentWrap__slider__item__info__desc__mark">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <div class="orderOffer__contentWrap__slider__item__info__desc__value">
+                            5.0
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="orderOffer__contentWrap__slider__item__text">" I've been using this site for a few months now, and I'm really impressed with the overall experience. 
+                      The interface is user-friendly and navigating through different sections is a breeze! "</div>
+                  </div>    
+                  <div class="orderOffer__contentWrap__slider__item">
+                    <div class="orderOffer__contentWrap__slider__item__info">
+                      <img src="img\\persone_photo.jpg" alt="personal foto">
+                      <div class="orderOffer__contentWrap__slider__item__info__desc">
+                        <div class="orderOffer__contentWrap__slider__item__info__desc__name">
+                          Alan Walker
+                        </div>
+                        <div class="orderOffer__contentWrap__slider__item__info__desc__mark">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <div class="orderOffer__contentWrap__slider__item__info__desc__value">
+                            5.0
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="orderOffer__contentWrap__slider__item__text">" I've been using this site for a few months now, and I'm really impressed with the overall experience. 
+                      The interface is user-friendly and navigating through different sections is a breeze! "</div>
+                  </div>                
+                  <div class="orderOffer__contentWrap__slider__item">
+                    <div class="orderOffer__contentWrap__slider__item__info">
+                      <img src="img\\persone_photo.jpg" alt="personal foto">
+                      <div class="orderOffer__contentWrap__slider__item__info__desc">
+                        <div class="orderOffer__contentWrap__slider__item__info__desc__name">
+                          Alan Walker
+                        </div>
+                        <div class="orderOffer__contentWrap__slider__item__info__desc__mark">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <img src="img\\svg\\star-icon.svg" alt="star icon">
+                          <div class="orderOffer__contentWrap__slider__item__info__desc__value">
+                            5.0
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="orderOffer__contentWrap__slider__item__text">" I've been using this site for a few months now, and I'm really impressed with the overall experience. 
+                      The interface is user-friendly and navigating through different sections is a breeze! "
+                    </div>
+                </div>
+              </div>
+              <div class="orderOffer__contentWrap__slider__dotsWrap">
+                <div class="orderOffer__contentWrap__slider__dotsWrap__dot"></div>
+                <div class="orderOffer__contentWrap__slider__dotsWrap__dot"></div>
+                <div class="orderOffer__contentWrap__slider__dotsWrap__dot"></div>
+              </div>
+            </section>
           </div>
         </div>
       </section>
