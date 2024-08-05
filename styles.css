@@ -226,7 +226,7 @@ img {
   line-height: 34.56px;
 }
 
-.orderOffer__contentWrap p {
+.orderOffer__contentWra__subtitle {
   font-size: 14px;
   line-height: 17.28px;
   color: rgba(187, 187, 187, 1);
@@ -491,6 +491,7 @@ input[type="file"] {
   display: flex;
   justify-content: flex-start;
   gap: 30px;
+  width: 460px;
 }
 
 .orderOffer__contentWrap__slider__item__info img {
@@ -529,7 +530,6 @@ input[type="file"] {
 .orderOffer__contentWrap__slider__item__text {
   margin-top: 20px;
   text-align: center;
-  width: 460px;
 }
 
 .orderOffer__contentWrap__slider__dotsWrap {
@@ -1295,7 +1295,7 @@ input[type="file"] {
     font-size: 28px;
   }
 
-  .orderOffer__contentWrap p {
+  .orderOffer__contentWra__subtitle {
     text-align: center;
     font-size: 12px;
     color: rgba(187, 187, 187, 1);
@@ -1439,7 +1439,7 @@ input[type="file"] {
     margin-bottom: 80px;
   }
 
-  .orderOffer__contentWrap__slider__item__text {
+  .orderOffer__contentWrap__slider__item__info {
     width: 280px;
   }
 

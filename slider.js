@@ -6,6 +6,8 @@ const dots = document.querySelectorAll('.orderOffer__contentWrap__slider__dotsWr
 
 let activeSlide = 0;
 
+updateSlide();
+
 stepPrevBtn.addEventListener('click', () => {
     activeSlide = Math.max(activeSlide - 1, 0);
     slider.scrollTo({ left: activeSlide * slider.offsetWidth, behavior: 'smooth' });
