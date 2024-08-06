@@ -237,8 +237,7 @@ img {
   display: flex;
   margin-bottom: 16px;
   justify-content: center;
-  --wrap-width: 100%;
-  width: var(--wrap-width);
+  width: 100%;
 }
 
 .orderOffer__contentWrap__stages__wrap__circle {
@@ -261,20 +260,23 @@ img {
   border: 5px solid rgba(40, 102, 144, 1);
 }
 
-.orderOffer__contentWrap__stages__wrap__circle:not(:last-child) {
-  margin-right: 48px;
+.orderOffer__contentWrap__stages__wrap__dots{
+  --dotsWidth: 100%;
+  width: var(--dotsWidth);
+  display: flex;
+  height: 4px;
+  gap: calc(var(--dotsWidth) / 5) px;
+  flex-wrap: nowrap;
+  margin: 40px -22px 0 -22px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.orderOffer__contentWrap__stages__wrap__circle__container:after {
-  --letter-spacing: 16px;
-  content: "\2022 \2022 \2022 \2022 \2022";
-  color: rgba(196, 196, 196, 1);
-  position: absolute;
-  font-size: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  letter-spacing: calc(var(--letter-spacing) / var(--wrap-width) * 100%);
-  left: 88px;
+.orderOffer__contentWrap__stages__wrap__dots__item{
+  background: rgba(196, 196, 196, 1);
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
 }
 
 .orderOffer__contentWrap__stages__wrap__circle__container__pic {
@@ -290,17 +292,17 @@ img {
 .orderOffer__contentWrap__stages__wrap__circle p {
   margin-top: 16px;
   font-size: 12px;
-  max-width: 150px;
+  width: 150px;
   text-align: center;
 }
 
 /*Submit form start*/
-.wrapper__contentWrap__from {
+.wrapper__contentWrap__form {
   margin-top: 80px;
   width: 100%;
 }
 
-.wrapper__contentWrap__from__wrap {
+.wrapper__contentWrap__form__wrap {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -308,7 +310,7 @@ img {
   gap: 40px;
 }
 
-.wrapper__contentWrap__from__wrap__info {
+.wrapper__contentWrap__form__wrap__info {
   width: 100%;
   font-size: 14px;
   display: grid;
@@ -317,21 +319,21 @@ img {
   gap: 30px;
 }
 
-.wrapper__contentWrap__from__wrap__info__field {
+.wrapper__contentWrap__form__wrap__info__field {
   height: 38px;
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(255, 255, 255, 1);
   border-radius: 4px;
 }
 
-.wrapper__contentWrap__from__wrap__info__rangeWrap {
+.wrapper__contentWrap__form__wrap__info__rangeWrap {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 2;
   position: relative;
 }
 
-.wrapper__contentWrap__from__wrap__info__rangeWrap div {
+.wrapper__contentWrap__form__wrap__info__rangeWrap div {
   width: 100%;
   position: absolute;
   top: 0;
@@ -340,16 +342,16 @@ img {
   align-items: center;
 }
 
-.wrapper__contentWrap__from__wrap__info__rangeWrap__percentValue {
+.wrapper__contentWrap__form__wrap__info__rangeWrap__percentValue {
   font-weight: 600;
 }
 
-.wrapper__contentWrap__from__wrap__info__rangeWrap__button {
+.wrapper__contentWrap__form__wrap__info__rangeWrap__button {
   position: absolute;
   bottom: 0;
 }
 
-.wrapper__contentWrap__from__wrap__info__rangeWrap__button[type="range"] {
+.wrapper__contentWrap__form__wrap__info__rangeWrap__button[type="range"] {
   -webkit-appearance: none;
   width: 100%;
   height: 6px;
@@ -359,7 +361,7 @@ img {
   margin: 0;
 }
 
-.wrapper__contentWrap__from__wrap__info__rangeWrap__button[type="range"]::-webkit-slider-thumb {
+.wrapper__contentWrap__form__wrap__info__rangeWrap__button[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
   aspect-ratio: 1;
@@ -369,7 +371,7 @@ img {
   cursor: grabbing;
 }
 
-.wrapper__contentWrap__from__wrap__info__field {
+.wrapper__contentWrap__form__wrap__info__field {
   position: relative;
 }
 
@@ -384,7 +386,7 @@ input[type="file"] {
   cursor: pointer;
 }
 
-.wrapper__contentWrap__from__wrap__info__doc {
+.wrapper__contentWrap__form__wrap__info__doc {
   position: absolute;
   top: 12px;
   width: 100%;
@@ -400,20 +402,20 @@ input[type="file"] {
   cursor: pointer;
 }
 
-.wrapper__contentWrap__from__wrap__info__doc__thumb {
+.wrapper__contentWrap__form__wrap__info__doc__thumb {
   margin-top: -2px;
   margin-right: 2px;
   height: 15px;
   width: auto;
 }
 
-.wrapper__contentWrap__from__wrap__info__field::placeholder {
+.wrapper__contentWrap__form__wrap__info__field::placeholder {
   padding-left: 8px;
   line-height: 21.6px;
   color: rgba(39, 39, 51, 1);
 }
 
-.wrapper__contentWrap__from__wrap__button {
+.wrapper__contentWrap__form__wrap__button {
   border-radius: 4px;
   font-weight: 500;
   line-height: 14.4px;
@@ -427,8 +429,8 @@ input[type="file"] {
   transition: 0.2s ease-out;
 }
 
-.wrapper__contentWrap__from__wrap__button:hover,
-.wrapper__contentWrap__from__wrap__button:focus {
+.wrapper__contentWrap__form__wrap__button:hover,
+.wrapper__contentWrap__form__wrap__button:focus {
   transform: scale(1.05);
 }
 /*Order Offer end*/
@@ -602,7 +604,11 @@ input[type="file"] {
 
 /*Media start */
 @media (min-width: 961px) and (max-width: 1320px) {
-  .wrapper__contentWrap__from {
+  .wrapper {
+    max-width: 75%;
+  }
+
+  .wrapper__contentWrap__form {
     max-width: 100%;
   }
 
@@ -630,23 +636,14 @@ input[type="file"] {
     margin-bottom: 54px;
   }
 
-  .orderOffer__contentWrap__stages__wrap__circle:not(:last-child) {
-    margin-right: 30px;
+  .orderOffer__contentWrap__stages__wrap__circle p{
+    width: 120px;
   }
 
-  .orderOffer__contentWrap__stages__wrap__circle__container:after {
-    --width: 100px;
-    --letter-spacing: 16;
-    content: "\2022 \2022 \2022 \2022 \2022";
-    color: rgba(196, 196, 196, 1);
-    position: absolute;
-    font-size: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: calc(var(--width) - 90px);
-    letter-spacing: calc(var(--letter-spacing) / var(--width) * 100) px;
-    left: 90px;
+  .orderOffer__contentWrap__stages__wrap__dots {
+    margin: 40px -4px 0 -4px;
   }
+  
 
   .intro__wrapper__contentWrap__intro__search__form__button {
     border-radius: 4px;
@@ -656,7 +653,7 @@ input[type="file"] {
     transition: 0.2s ease-out;
   }
 
-  .wrapper__contentWrap__from__wrap {
+  .wrapper__contentWrap__form__wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -664,13 +661,13 @@ input[type="file"] {
     width: 100%;
   }
 
-  .wrapper__contentWrap__from__wrap__info {
+  .wrapper__contentWrap__form__wrap__info {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
 
-  .wrapper__contentWrap__from__wrap__info__field {
+  .wrapper__contentWrap__form__wrap__info__field {
     font-size: 12px;
     height: 40px;
     background: rgba(255, 255, 255, 0.85);
@@ -720,6 +717,19 @@ input[type="file"] {
     line-height: 24px;
     margin-bottom: 48px;
   }
+  
+  .orderOffer__contentWrap__stages__wrap__dots {
+    margin: 40px 0 0 0;
+  }
+
+  .orderOffer__contentWrap__stages__wrap__dots__item:nth-child(4),
+  .orderOffer__contentWrap__stages__wrap__dots__item:nth-child(5){
+    display: none;
+  }
+
+  .orderOffer__contentWrap__stages__wrap__circle p{
+    width: 100px;
+  }
 
   .intro__wrapper__contentWrap__intro__search__form__button {
     border-radius: 4px;
@@ -729,13 +739,13 @@ input[type="file"] {
     transition: 0.2s ease-out;
   }
 
-  .wrapper__contentWrap__from {
+  .wrapper__contentWrap__form {
     margin-top: 40px;
     margin-bottom: 40px;
     width: 100%;
   }
 
-  .wrapper__contentWrap__from__wrap {
+  .wrapper__contentWrap__form__wrap {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -743,7 +753,9 @@ input[type="file"] {
     gap: 40px;
   }
 
-  .wrapper__contentWrap__from__wrap__info {
+  .orderOffer__contentWrap__stages__wrap__dots__item
+
+  .wrapper__contentWrap__form__wrap__info {
     width: 100%;
     font-size: 14px;
     display: grid;
@@ -756,7 +768,7 @@ input[type="file"] {
     gap: var(--gap);
   }
 
-  .wrapper__contentWrap__from__wrap__info__field {
+  .wrapper__contentWrap__form__wrap__info__field {
     font-size: 12px;
     width: calc((var(--width) - var(--gap)) / 2) px;
     height: 40px;
@@ -765,21 +777,12 @@ input[type="file"] {
     border-radius: 4px;
   }
 
-  .wrapper__contentWrap__from__wrap__info__field:first-child {
-    grid-column-start: 1;
-    grid-row-start: 3;
-  }
 
-  .wrapper__contentWrap__from__wrap__info__field:nth-child(3) {
-    grid-column-start: 1;
-    grid-row-start: 1;
-  }
-
-  .wrapper__contentWrap__from__wrap__info__rangeWrap {
+  .wrapper__contentWrap__form__wrap__info__rangeWrap {
     position: relative;
   }
 
-  .wrapper__contentWrap__from__wrap__info__rangeWrap div {
+  .wrapper__contentWrap__form__wrap__info__rangeWrap div {
     position: absolute;
     top: 0;
     display: flex;
@@ -787,18 +790,18 @@ input[type="file"] {
     align-items: center;
   }
 
-  .wrapper__contentWrap__from__wrap__info__rangeWrap div p {
+  .wrapper__contentWrap__form__wrap__info__rangeWrap div p {
     font-size: 12px;
   }
 
-  .wrapper__contentWrap__from__wrap__info__doc__thumb {
+  .wrapper__contentWrap__form__wrap__info__doc__thumb {
     margin-top: -2px;
     margin-right: 2px;
     height: 15px;
     width: auto;
   }
 
-  .wrapper__contentWrap__from__wrap__button {
+  .wrapper__contentWrap__form__wrap__button {
     height: 40px;
     width: 100%;
   }
@@ -995,6 +998,13 @@ input[type="file"] {
 
   .orderOffer__contentWrap__stages__wrap__circle__container {
   }
+
+
+  .orderOffer__contentWrap__stages__wrap__dots{
+    display: none;
+  }
+
+
   .orderOffer__contentWrap__stages__wrap__circle__container:after {
     content: "\2022 \2022 \2022";
     writing-mode: vertical-rl;
@@ -1015,13 +1025,13 @@ input[type="file"] {
   }
   /* Submit form */
 
-  .wrapper__contentWrap__from {
+  .wrapper__contentWrap__form {
     margin-top: 40px;
     margin-bottom: 40px;
     width: 100%;
   }
 
-  .wrapper__contentWrap__from__wrap {
+  .wrapper__contentWrap__form__wrap {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1029,7 +1039,7 @@ input[type="file"] {
     gap: 40px;
   }
 
-  .wrapper__contentWrap__from__wrap__info {
+  .wrapper__contentWrap__form__wrap__info {
     width: 100%;
     font-size: 14px;
     display: grid;
@@ -1042,7 +1052,7 @@ input[type="file"] {
     gap: var(--gap);
   }
 
-  .wrapper__contentWrap__from__wrap__info__field {
+  .wrapper__contentWrap__form__wrap__info__field {
     font-size: 12px;
     width: calc((var(--width) - var(--gap)) / 2) px;
     height: 40px;
@@ -1051,21 +1061,21 @@ input[type="file"] {
     border-radius: 4px;
   }
 
-  .wrapper__contentWrap__from__wrap__info__field:first-child {
+  .wrapper__contentWrap__form__wrap__info__field:first-child {
     grid-column-start: 1;
     grid-row-start: 3;
   }
 
-  .wrapper__contentWrap__from__wrap__info__field:nth-child(3) {
+  .wrapper__contentWrap__form__wrap__info__field:nth-child(3) {
     grid-column-start: 1;
     grid-row-start: 1;
   }
 
-  .wrapper__contentWrap__from__wrap__info__rangeWrap {
+  .wrapper__contentWrap__form__wrap__info__rangeWrap {
     position: relative;
   }
 
-  .wrapper__contentWrap__from__wrap__info__rangeWrap div {
+  .wrapper__contentWrap__form__wrap__info__rangeWrap div {
     position: absolute;
     top: 0;
     display: flex;
@@ -1073,18 +1083,18 @@ input[type="file"] {
     align-items: center;
   }
 
-  .wrapper__contentWrap__from__wrap__info__rangeWrap div p {
+  .wrapper__contentWrap__form__wrap__info__rangeWrap div p {
     font-size: 12px;
   }
 
-  .wrapper__contentWrap__from__wrap__info__doc__thumb {
+  .wrapper__contentWrap__form__wrap__info__doc__thumb {
     margin-top: -2px;
     margin-right: 2px;
     height: 15px;
     width: auto;
   }
 
-  .wrapper__contentWrap__from__wrap__button {
+  .wrapper__contentWrap__form__wrap__button {
     height: 40px;
     width: 100%;
   }
@@ -1320,6 +1330,10 @@ input[type="file"] {
     margin-right: 48px;
   }
 
+  .orderOffer__contentWrap__stages__wrap__dots{
+    display: none;
+  }
+
   .orderOffer__contentWrap__stages__wrap__circle__container {
   }
   .orderOffer__contentWrap__stages__wrap__circle__container:after {
@@ -1342,13 +1356,13 @@ input[type="file"] {
   }
   /* Submit form */
 
-  .wrapper__contentWrap__from {
+  .wrapper__contentWrap__form {
     margin-top: 40px;
     margin-bottom: 40px;
     width: 100%;
   }
 
-  .wrapper__contentWrap__from__wrap {
+  .wrapper__contentWrap__form__wrap {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1356,7 +1370,7 @@ input[type="file"] {
     gap: 40px;
   }
 
-  .wrapper__contentWrap__from__wrap__info {
+  .wrapper__contentWrap__form__wrap__info {
     width: 100%;
     font-size: 14px;
     display: grid;
@@ -1369,7 +1383,7 @@ input[type="file"] {
     gap: var(--gap);
   }
 
-  .wrapper__contentWrap__from__wrap__info__field {
+  .wrapper__contentWrap__form__wrap__info__field {
     font-size: 12px;
     width: calc((var(--width) - var(--gap)) / 2) px;
     height: 40px;
@@ -1378,21 +1392,21 @@ input[type="file"] {
     border-radius: 4px;
   }
 
-  .wrapper__contentWrap__from__wrap__info__field:first-child {
+  .wrapper__contentWrap__form__wrap__info__field:first-child {
     grid-column-start: 1;
     grid-row-start: 3;
   }
 
-  .wrapper__contentWrap__from__wrap__info__field:nth-child(3) {
+  .wrapper__contentWrap__form__wrap__info__field:nth-child(3) {
     grid-column-start: 1;
     grid-row-start: 1;
   }
 
-  .wrapper__contentWrap__from__wrap__info__rangeWrap {
+  .wrapper__contentWrap__form__wrap__info__rangeWrap {
     position: relative;
   }
 
-  .wrapper__contentWrap__from__wrap__info__rangeWrap div {
+  .wrapper__contentWrap__form__wrap__info__rangeWrap div {
     position: absolute;
     top: 0;
     display: flex;
@@ -1400,22 +1414,22 @@ input[type="file"] {
     align-items: center;
   }
 
-  .wrapper__contentWrap__from__wrap__info__rangeWrap div p {
+  .wrapper__contentWrap__form__wrap__info__rangeWrap div p {
     font-size: 12px;
   }
 
-  .wrapper__contentWrap__from__wrap__info__doc {
+  .wrapper__contentWrap__form__wrap__info__doc {
     top: 10px;
   }
 
-  .wrapper__contentWrap__from__wrap__info__doc__thumb {
+  .wrapper__contentWrap__form__wrap__info__doc__thumb {
     margin-top: -2px;
     margin-right: 2px;
     height: 15px;
     width: auto;
   }
 
-  .wrapper__contentWrap__from__wrap__button {
+  .wrapper__contentWrap__form__wrap__button {
     height: 40px;
     width: 100%;
   }
