@@ -1,5 +1,5 @@
-const rangeInput = document.querySelector('.wrapper__contentWrap__from__wrap__info__rangeWrap__button');
-const percentValue = document.querySelector('.wrapper__contentWrap__from__wrap__info__rangeWrap__percentValue');
+const rangeInput = document.querySelector('.wrapper__contentWrap__form__wrap__info__rangeWrap__button');
+const percentValue = document.querySelector('.wrapper__contentWrap__form__wrap__info__rangeWrap__percentValue');
 
 
 (function() {
